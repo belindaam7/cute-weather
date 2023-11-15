@@ -4,14 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      body {
+        font-family: "jetbrains mono";
+        color: #d59bf6;
+        display: grid;
+        justify-content: center;
+        margin-top: 7%;
+      }
+      footer {
+        display: block;
+        position: static;
+        padding: 25px;
+        text-align: center;
+      }
+      input::placeholder {
+        font-family: "jetbrains mono";
+        color: #1e6262;
+      }
+
+      .container {
+        display: block;
+        position: relative;
+        justify-content: center;
+        height: 440px;
+        width: 640px;
+
+        background-color: #8ef6e4;
+        box-sizing: border-box;
+
+        border: solid 5px #3a9b9b4f;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 10px 10px 10px #8988f1;
+      }
+      .current-temperature {
+        color: #1e6262;
+        background-color: #ffffff60;
+        display: inline-block;
+        border: solid 5px #3a9b9b98;
+        font-size: 80px;
+        padding: 0px 7px;
+        text-shadow: 5px 5px 5px #41af9b;
+
+        border-radius: 7px;
+        box-shadow: 10px 10px 10px #8988f1;
+
+        margin-top: -30px;
+      }
+      .header {
+        color: #8988f1;
+        padding: 0;
+        margin: 0;
+        text-shadow: 2px 3px 5px #ffffffd4;
+      }
+      .current-city {
+        color: #8988f1;
+        padding: 10px;
+        text-shadow: 2px 3px 5px #ffffffd4;
+        margin-top: 0;
+      }
+      #form-search-city {
+        display: inline-block;
+        border: solid 3px #3a9b9bd2;
+        box-shadow: 5px 5px 5px #8988f1;
+        padding: 5px;
+        text-align: center;
+        width: 180px;
+        height: 25px;
+        position: relative;
+        border-radius: 5px;
+      }
+      .search-city-button {
+        box-shadow: 5px 5px 5px #0ab190d4;
+        color: white;
+        border: solid 3px #ffffff;
+        background-color: #8988f1;
+        border-radius: 5px;
+        font-family: "jetbrains mono";
+        height: 28px;
+        margin: 0 0 0;
+        padding: 5px;
+        width: 80px;
+        height: 40px;
+      }
+
+      .search-city-button:hover {
+        width: 83px;
+        height: 43px;
+        transition: all 300ms linear;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to a random weather app</h1>
+    <div class="container">
+      <form action="search" class="form-search-city">
+        <div class="form-search-city">
+          <input
+            type="text"
+            name="search"
+            placeholder="Enter your city here."
+            id="form-search-city"
+          />
+          <input type="submit" value="Search" class="search-city-button" />
+        </div>
+      </form>
+      <h1 id="current-temp-header">
+        <div class="header">
+          Right now <br />
+          <div id="date-and-time">date and time</div>
+          it's...
+        </div>
+
+        <br />
+
+        <div class="current-temperature">
+          <span class="current-temp">75</span> <span class="units">°F</span>
+        </div>
+        <div class="current-city">
+          in
+          <span id="current-city">San Diego</span>
+        </div>
+      </h1>
+    </div>
     <footer>
-      Coded by <a href="https://github.com/belindaam7">Belinda Amezquita</a> in
-      <a href="https://github.com/belindaam7/weather-app-new1">GitHub</a> hosted
-      by
-      <a href="https://my-weather-app-project-shecodes.netlify.app/"
+      Coded by
+      <a href="https://github.com/belindaam7" target="_blank"
+        >Belinda Amezquita</a
+      >
+      in
+      <a href="https://github.com/belindaam7/weather-app-new1" target="_blank"
+        >GitHub</a
+      >
+      hosted by
+      <a
+        href="https://my-weather-app-project-shecodes.netlify.app/"
+        target="_blank"
         >Netlify.</a
       >
     </footer>
