@@ -91,3 +91,8 @@ input::placeholder {
 .units {
   margin-left: -50px;
 }
+
+#date-and-time {
+  font-size: 22px;
+  color: #1e6262;
+}
