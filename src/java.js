@@ -19,6 +19,10 @@ function updateTemp(response) {
     weatherIcon.innerHTML = `❂`;
   } else {
     weatherIcon.innerHTML = `❄︎`;
+    let humidity = document.querySelector(`#humidity`);
+    let windSpeed = document.querySelector(`#wind-speed`);
+    humidity.innerHTML = Math.round(response.data.temperature.humidity);
+    windSpeed.innerHTML = Math.round(response.data.wind.speed);
   }
 }
 let searchButton = document.querySelector(`.search-city-button`);

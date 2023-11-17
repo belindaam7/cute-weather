@@ -59,7 +59,7 @@ input::placeholder {
   padding: 5px;
   text-align: center;
   width: 400px;
-  height: 40px;
+  height: 28px;
   position: relative;
   border-radius: 5px;
 }
@@ -99,4 +99,24 @@ input::placeholder {
 
 .hidden-elements {
   color: transparent;
+}
+
+#conditions {
+  font-size: 22px;
+  color: #1e6262;
+}
+
+.humidity {
+  color: #d59bf6;
+}
+
+.wind-speed {
+  color: #d59bf6;
+}
+#humidity {
+  color: #d59bf6;
+}
+
+#wind-speed {
+  color: #d59bf6;
 }
