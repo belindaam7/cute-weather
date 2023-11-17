@@ -1,8 +1,7 @@
 body {
   font-family: "jetbrains mono";
   color: #d59bf6;
-  display: grid;
-  justify-content: center;
+  justify-content: left;
   margin-top: 7%;
 }
 footer {
@@ -17,26 +16,30 @@ input::placeholder {
 }
 
 .container {
-  justify-content: center;
-
   background-color: #8ef6e4;
   box-sizing: border-box;
 
   border: solid 5px #3a9b9b4f;
   border-radius: 10px;
-  padding: 40px;
+  padding: 20px;
   box-shadow: 10px 10px 10px #8988f1;
 }
+.main-body {
+  display: grid;
+  grid-template-columns: max-content 800px;
+}
+
 .current-temperature {
   color: #1e6262;
   background-color: #ffffff60;
-  display: inline-block;
+  display: block;
+  justify-content: left;
   border: solid 5px #3a9b9b98;
   font-size: 80px;
-  padding: 0px 7px;
+  padding: 0px;
   text-shadow: 5px 5px 5px #41af9b;
   position: absolute;
-  margin-top: -150px;
+  margin-top: 140px;
   border-radius: 7px;
   box-shadow: 10px 10px 10px #8988f1;
 }
@@ -47,10 +50,13 @@ input::placeholder {
   text-shadow: 2px 3px 5px #ffffffd4;
 }
 .current-city {
+  display: block;
+
   color: #8988f1;
+  font-size: 38px;
+  font-weight: 900;
   padding: 10px;
   text-shadow: 2px 3px 5px #ffffffd4;
-  margin-top: 0;
 }
 #form-search-city {
   display: inline-block;
@@ -60,7 +66,7 @@ input::placeholder {
   text-align: center;
   width: 400px;
   height: 28px;
-  position: relative;
+  position: sticky;
   border-radius: 5px;
 }
 .search-city-button {
@@ -90,11 +96,10 @@ input::placeholder {
 }
 
 #weather-icon {
-  display: flex;
-  margin-left: 320px;
-  margin-top: -70px;
-  font-size: 180px;
-  justify-content: space-around;
+  display: inline-block;
+  margin-left: -140px;
+  margin-top: 15px;
+  font-size: 100px;
 }
 
 .hidden-elements {
@@ -102,7 +107,9 @@ input::placeholder {
 }
 
 #conditions {
-  font-size: 22px;
+  display: block;
+  margin-top: 120px;
+  font-size: 18px;
   color: #1e6262;
 }
 
@@ -118,5 +125,9 @@ input::placeholder {
 }
 
 #wind-speed {
+  color: #d59bf6;
+}
+
+#condition-description {
   color: #d59bf6;
 }

@@ -21,8 +21,10 @@ function updateTemp(response) {
     weatherIcon.innerHTML = `❄︎`;
     let humidity = document.querySelector(`#humidity`);
     let windSpeed = document.querySelector(`#wind-speed`);
+    let skyCondition = document.querySelector(`#condition-description`);
     humidity.innerHTML = Math.round(response.data.temperature.humidity);
     windSpeed.innerHTML = Math.round(response.data.wind.speed);
+    skyCondition.innerHTML = response.data.condition.description;
   }
 }
 let searchButton = document.querySelector(`.search-city-button`);

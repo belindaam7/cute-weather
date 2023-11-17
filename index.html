@@ -31,29 +31,36 @@
           <input type="submit" value="Search" class="search-city-button" />
         </div>
       </form>
-      <h1 id="current-temp-header">
-        <div class="header">
-          Right now
-          <div id="date-and-time">(???)</div>
 
-          it's...
-        </div>
-        <div id="weather-icon">❂</div>
+      <div class="main-body">
+        <h1 id="current-temp-header">
+          <span class="header">
+            Right now
+            <div id="date-and-time">(???)</div>
 
+            it's...</span
+          >
+        </h1>
         <div class="current-temperature">
           <span id="current-temp">75</span> <span class="units">°F</span>
         </div>
+        <span id="weather-icon">❂</span>
         <div id="conditions">
           With
-          <span id="humidity">47</span><span class="humidity">%</span> humidity
-          and <span id="wind-speed">3</span
-          ><span class="humidity">mph</span> winds.
+          <span id="humidity">47</span
+          ><span class="humidity">%</span> humidity,<span id="wind-speed"
+            >3</span
+          >
+          <span class="humidity">mph</span> winds
+          <br />
+          and <span id="condition-description">few clouds</span>.
         </div>
+        <br />
         <div class="current-city">
           in
           <span id="current-city">SAN DIEGO</span>
         </div>
-      </h1>
+      </div>
     </div>
     <footer>
       Coded by
@@ -65,11 +72,7 @@
         >GitHub</a
       >
       hosted by
-      <a
-        href="https://my-weather-app-project-shecodes.netlify.app/"
-        target="_blank"
-        >Netlify.</a
-      >
+      <a href="https://cutest-weather.netlify.app/" target="_blank">Netlify.</a>
     </footer>
     <script src="src/java.js"></script>
     <div class="hidden-elements"></div>
