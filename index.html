@@ -20,17 +20,22 @@
   </head>
   <body>
     <div class="container">
-      <form action="search" class="form-search-city">
-        <div class="form-search-city">
-          <input
-            type="text"
-            name="search"
-            placeholder="Need the weather? Enter your city here!"
-            id="form-search-city"
-          />
-          <input type="submit" value="Search" class="search-city-button" />
-        </div>
-      </form>
+      <div class="form-container">
+        <form action="search" class="form-search-city">
+          <div class="form-search-city-container">
+            <input
+              type="text"
+              name="search"
+              placeholder="Enter your city here!"
+              id="form-search-city"
+            />
+          </div>
+
+          <div class="search-city-button">
+            <input type="submit" value="Search" id="search-city-button" />
+          </div>
+        </form>
+      </div>
 
       <div class="main-body">
         <h1 id="current-temp-header">
@@ -44,16 +49,17 @@
         <div class="current-temperature">
           <span id="current-temp">75</span> <span class="units">°F</span>
         </div>
-        <span id="weather-icon">❂</span>
+        <div id="weather-icon">🌈</div>
+        <br />
+        <br />
         <div id="conditions">
           With
           <span id="humidity">47</span
           ><span class="humidity">%</span> humidity,<span id="wind-speed"
             >3</span
           >
-          <span class="humidity">mph</span> winds
-          <br />
-          and <span id="condition-description">few clouds</span>.
+          <span class="humidity">mph</span> winds and
+          <span id="condition-description">few clouds</span>.
         </div>
         <br />
         <div class="current-city">
@@ -61,7 +67,9 @@
           <span id="current-city">SAN DIEGO</span>
         </div>
       </div>
+      <div id="forecast"></div>
     </div>
+
     <footer>
       Coded by
       <a href="https://github.com/belindaam7" target="_blank"
