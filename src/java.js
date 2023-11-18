@@ -19,7 +19,15 @@ function updateTemp(response) {
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   skyCondition.innerHTML = response.data.condition.description;
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
   getForecast(response.data.city);
+}
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+
+  return days[date.getDay()];
 }
 
 function getForecast(city) {
@@ -32,24 +40,27 @@ function getForecast(city) {
 function displayForecast(response) {
   console.log(response.data);
   let forecastHtml = "";
-  response.data.daily.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `
     <div class="weather-forecast-container">
     <div class="weather-forecast">
-    <div class="weather-forecast-day">tue</div>
+    <div class="weather-forecast-day">${formatDay(day.time)}</div>
     <img src="${day.condition.icon_url}" class="weather-forecast-icon"/>
     </div>
     <span class="weather-forecast-temp-max">${Math.round(
       day.temperature.maximum
     )}°</span>
       <span class="weather-forecast-temp-min">${Math.round(
-        day.temperature.minumum
+        day.temperature.minimum
       )}°</span>
         </div>
         </div>
+        
         `;
+    }
   });
   let forecastElement = document.querySelector(`#forecast`);
   forecastElement.innerHTML = forecastHtml;
@@ -89,3 +100,6 @@ month = months[month];
 let year = rightNow.getFullYear();
 
 let todaysDate = `${hour}:${minutes} ${day} ${month} ${date}`;
+let dateAndTime = document.querySelector(`#date-and-time`);
+dateAndTime.innerHTML = todaysDate;
+getForecast(`san diego`);

@@ -49,9 +49,14 @@
         <div class="current-temperature">
           <span id="current-temp">75</span> <span class="units">°F</span>
         </div>
-        <div id="weather-icon">🌈</div>
-        <br />
-        <br />
+        <div id="weather-icon">
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-night.png"
+            alt=""
+            class="weather-icon"
+          />
+        </div>
+
         <div id="conditions">
           With
           <span id="humidity">47</span
@@ -67,6 +72,7 @@
           <span id="current-city">SAN DIEGO</span>
         </div>
       </div>
+
       <div id="forecast"></div>
     </div>
 
@@ -83,6 +89,5 @@
       <a href="https://cutest-weather.netlify.app/" target="_blank">Netlify.</a>
     </footer>
     <script src="src/java.js"></script>
-    <div class="hidden-elements"></div>
   </body>
 </html>
